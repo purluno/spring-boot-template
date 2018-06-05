@@ -1,0 +1,15 @@
+configuration:
+  appenders:
+    console:
+      name: STDOUT
+      patternlayout:
+        pattern: "%date %level %logger %message%n"
+  loggers:
+    logger:
+      - {name: org.hibernate, level: warn}
+      - {name: org.springframework, level: warn}
+      - {name: org.thymeleaf, level: warn}
+    root:
+      level: debug
+      appenderref:
+        ref: STDOUT
